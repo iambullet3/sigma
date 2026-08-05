@@ -13,11 +13,11 @@ webhooks = {}
 HTML = """
 <!DOCTYPE html>
 <html>
-<head><title>Protected Webhook Maker</title></head>
+<head><title>distraction on the beat ho</title></head>
 <body style="display:flex;justify-content:center;align-items:center;height:100vh;margin:0;font-family:sans-serif;background:#f0f0f0;">
 <div style="background:white;padding:2rem;border-radius:8px;width:480px;max-width:94%;box-shadow:0 2px 12px rgba(0,0,0,0.15);">
-<h2 style="margin-top:0;">🔒 Create Protected Webhook</h2>
-<input id="targetInput" type="text" placeholder="https://your-webhook.com/endpoint" style="width:100%;padding:0.6rem;margin:0.5rem 0;box-sizing:border-box;font-size:1rem;border:1px solid #ccc;border-radius:4px;">
+<h2 style="margin-top:0;">Protect your webhook</h2>
+<input id="targetInput" type="text" placeholder="change me to your webhook" style="width:100%;padding:0.6rem;margin:0.5rem 0;box-sizing:border-box;font-size:1rem;border:1px solid #ccc;border-radius:4px;">
 <button id="createBtn" style="width:100%;padding:0.6rem;background:#007bff;color:white;border:none;border-radius:4px;font-size:1rem;cursor:pointer;">Create</button>
 <div id="resultArea" style="margin-top:1rem;display:none;background:#e9ecef;padding:0.5rem 0.8rem;border-radius:4px;display:flex;justify-content:space-between;align-items:center;word-break:break-all;">
 <span id="protectedUrl" style="flex:1;"></span>
