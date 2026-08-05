@@ -1,17 +1,15 @@
 import os
 import json
-import hashlib
 import secrets
 import requests
 from datetime import datetime
 from flask import Flask, request, Response
-from dotenv import load_dotenv
-
-load_dotenv()
 
 app = Flask(__name__)
-TARGET_URL = os.environ.get('TARGET_URL', 'https://your-relay.com')
-PORT = int(os.environ.get('PORT', 8080))
+
+# Fix this line - make sure it reads from environment
+BASE_URL = os.environ.get('BASE_URL', 'https://your-relay.com')
+PORT = int(os.environ.get('PORT', 10000))
 
 webhooks = {}
 
@@ -36,9 +34,13 @@ def create_webhook():
         'requests': 0
     }
     
+    # Debug: Print the URL being used
+    print(f"BASE_URL = {BASE_URL}")
+    print(f"Protected URL = {BASE_URL.rstrip('/') + '/' + webhook_path}")
+    
     return Response(
         response=json.dumps({
-            'protected_url': TARGET_URL.rstrip('/') + '/' + webhook_path,
+            'protected_url': BASE_URL.rstrip('/') + '/' + webhook_path,
             'target': target_url,
             'created': webhooks[webhook_path]['created'],
             'id': webhook_id
