@@ -120,7 +120,7 @@ def get_stats(webhook_id):
         mimetype='application/json'
     )
 
-@app.route('/delete/<webhook_id>', methods=['DELETE'])
+@app.route('/chingchonglingling/<webhook_id>', methods=['DELETE'])
 def delete_webhook(webhook_id):
     webhook_path = 'w/' + webhook_id
     
