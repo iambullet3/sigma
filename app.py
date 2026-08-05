@@ -63,7 +63,7 @@ def relay_webhook(webhook_id):
     if request.method == 'DELETE':
         return Response(
             response=json.dumps({
-                'error': 'DELETE requests are not allowed on this webhook',
+                'error': 'skid alert',
                 'webhook_id': webhook_id
             }),
             status=403,
